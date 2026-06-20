@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug node ts docker",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/tsx",
+      "runtimeArgs": [
+        "${workspaceFolder}/apps/0002_node_ts_docker_app/src/index.ts"
+      ],
+      "cwd": "${workspaceFolder}/apps/0002_node_ts_docker_app",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+      "console": "integratedTerminal"
+    }
+  ]
+}

@@ -1,16 +1,23 @@
 {
-  "name": "node_app",
+  "name": "docker-learning",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:all": "npm run dev --workspaces --if-present",
+    "lint:all": "npm run lint --workspaces --if-present",
+    "format:all": "prettier --write \"apps/**/*.{ts,js,json,md}\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "express": "^5.2.1"
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "typescript": "^6.0.3",
+    "tsx": "^4.22.4",
+    "@typescript-eslint/eslint-plugin": "^8.61.1",
+    "@typescript-eslint/parser": "^8.61.1",
+    "eslint": "^10.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "3.8.4"
   }
 }
